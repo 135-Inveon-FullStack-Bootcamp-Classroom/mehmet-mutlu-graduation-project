@@ -1526,6 +1526,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlDocument.dll": {}
         }
+      },
+      "ECommerceApp.Data.Entities/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/ECommerceApp.Data.Entities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ECommerceApp.Data.Entities.dll": {}
+        }
       }
     }
   },
@@ -5475,10 +5485,16 @@
         "system.xml.xmldocument.4.3.0.nupkg.sha512",
         "system.xml.xmldocument.nuspec"
       ]
+    },
+    "ECommerceApp.Data.Entities/1.0.0": {
+      "type": "project",
+      "path": "../ECommerceApp.Data.Entities/ECommerceApp.Data.Entities.csproj",
+      "msbuildProject": "../ECommerceApp.Data.Entities/ECommerceApp.Data.Entities.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "ECommerceApp.Data.Entities >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 5.0.12",
       "Microsoft.EntityFrameworkCore.Proxies >= 5.0.12"
     ]
@@ -5491,11 +5507,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Public\\patika\\InveonBootcampGraduationProject\\backend\\ECommerceApp\\DAL\\DAL.csproj",
-      "projectName": "DAL",
-      "projectPath": "C:\\Users\\Public\\patika\\InveonBootcampGraduationProject\\backend\\ECommerceApp\\DAL\\DAL.csproj",
+      "projectUniqueName": "C:\\Users\\Public\\patika\\InveonBootcampGraduationProject\\backend\\ECommerceApp\\ECommerceApp.Data.DAL\\ECommerceApp.Data.DAL.csproj",
+      "projectName": "ECommerceApp.Data.DAL",
+      "projectPath": "C:\\Users\\Public\\patika\\InveonBootcampGraduationProject\\backend\\ECommerceApp\\ECommerceApp.Data.DAL\\ECommerceApp.Data.DAL.csproj",
       "packagesPath": "C:\\Users\\Mehmet Mutlu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Public\\patika\\InveonBootcampGraduationProject\\backend\\ECommerceApp\\DAL\\obj\\",
+      "outputPath": "C:\\Users\\Public\\patika\\InveonBootcampGraduationProject\\backend\\ECommerceApp\\ECommerceApp.Data.DAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -5516,7 +5532,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Public\\patika\\InveonBootcampGraduationProject\\backend\\ECommerceApp\\ECommerceApp.Data.Entities\\ECommerceApp.Data.Entities.csproj": {
+              "projectPath": "C:\\Users\\Public\\patika\\InveonBootcampGraduationProject\\backend\\ECommerceApp\\ECommerceApp.Data.Entities\\ECommerceApp.Data.Entities.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

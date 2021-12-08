@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Kql5G/RBoogqv+qswaWa7UhdTYd399JXKZC1GjGb85wePYXaAhOru1LYM/IwHV3qt02egTd6BESQRheOMgAxYA==",
+  "dgSpecHash": "5EiZDDG/X65AUtUyCxl2J+s505q5U6BuAR2h0iLiO+K5bycgO30R0QJGES67/zafZHBGP1mrI3VvqhQZK9Z2mA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Public\\patika\\InveonBootcampGraduationProject\\backend\\ECommerceApp\\DAL\\DAL.csproj",
+  "projectFilePath": "C:\\Users\\Public\\patika\\InveonBootcampGraduationProject\\backend\\ECommerceApp\\ECommerceApp.Data.DAL\\ECommerceApp.Data.DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mehmet Mutlu\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
     "C:\\Users\\Mehmet Mutlu\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.12\\microsoft.entityframeworkcore.5.0.12.nupkg.sha512",

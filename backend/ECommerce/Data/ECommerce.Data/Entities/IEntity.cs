@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ECommerceApp.Data.Entities
+namespace ECommerce.Data.Entities
 {
-    public class BaseEntity
+    interface IEntity
     {
-        public int Id { get; set; }
     }
 }

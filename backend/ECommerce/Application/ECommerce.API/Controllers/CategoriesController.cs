@@ -20,7 +20,7 @@ namespace ECommerce.API.Controllers
         [HttpGet("{id}/products")]
         public List<ProductViewModel> GetCategoryProducts(int id)
         {
-            var data = _categoryEngine.GetProductListByCategoryIdForCatalog(id);
+            var data = _categoryEngine.GetProductListByCategoryId(id);
             return data;
         }
     }

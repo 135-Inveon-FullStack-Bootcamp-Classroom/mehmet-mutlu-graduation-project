@@ -15,7 +15,7 @@ namespace ECommerce.Data.Entities
         public string Description { get; set; }
         public int StockAmount { get; set; }
         public int SoldAmount { get; set; }
-        public List<string> ImageURLs { get; set; }
+        public string ImageURLs { get; set; }
         public int CategoryId { get; set; }
         public virtual CategoryEntity Category { get; set; }
     }

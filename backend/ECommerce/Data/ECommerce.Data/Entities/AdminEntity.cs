@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,8 @@ namespace ECommerce.Data.Entities
         FullAuthority = 1,
         HalfAuthority = 2
     }
+
+    [Table("Admins")]
     public class AdminEntity : BaseEntity
     {
         public string Email { get; set; }

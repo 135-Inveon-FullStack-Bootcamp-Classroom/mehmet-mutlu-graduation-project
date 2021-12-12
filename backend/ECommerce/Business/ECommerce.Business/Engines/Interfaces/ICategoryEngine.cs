@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace ECommerce.Business.Engines.Interfaces
 {
-    public interface ICatalogEngine : IEngineBase
+    public interface ICategoryEngine : IEngineBase
     {
-        List<ProductViewModel> GetProductListByCategoryIdForCatalog(int categoryId);
+
+        List<ProductViewModel> GetProductListByCategoryId(int categoryId);
     }
 }

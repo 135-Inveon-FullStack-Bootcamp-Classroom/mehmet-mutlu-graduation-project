@@ -14,7 +14,5 @@ namespace ECommerce.Data.Entities
         public DateTime DeliveryDate { get; set; }
         public int TotalPrice { get; set; }
         public string CardNumber { get; set; }
-        public virtual ICollection<ProductEntity> ProductEntities { get; set; }
-
     }
 }

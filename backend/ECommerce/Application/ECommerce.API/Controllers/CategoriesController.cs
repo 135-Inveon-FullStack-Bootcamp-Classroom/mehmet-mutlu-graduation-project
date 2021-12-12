@@ -11,16 +11,16 @@ namespace ECommerce.API.Controllers
 {
     public class CategoriesController : BaseController
     {
-        private readonly ICatalogEngine _catalogEngine;
-        public CategoriesController(ICatalogEngine catalogEngine)
+        private readonly ICategoryEngine _categoryEngine;
+        public CategoriesController(ICategoryEngine categoryEngine)
         {
-            _catalogEngine = catalogEngine;
+            _categoryEngine = categoryEngine;
         }
 
         [HttpGet("{id}/products")]
         public List<ProductViewModel> GetCategoryProducts(int id)
         {
-            var data = _catalogEngine.GetProductListByCategoryIdForCatalog(id);
+            var data = _categoryEngine.GetProductListByCategoryIdForCatalog(id);
             return data;
         }
     }

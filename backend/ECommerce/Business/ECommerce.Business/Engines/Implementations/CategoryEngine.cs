@@ -11,17 +11,17 @@ using System.Threading.Tasks;
 
 namespace ECommerce.Business.Engines.Implementations
 {
-    public class CatalogEngine : ICatalogEngine
+    public class CategoryEngine : ICategoryEngine
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
-        public CatalogEngine(IUnitOfWork unitOfWork, IMapper mapper)
+        public CategoryEngine(IUnitOfWork unitOfWork, IMapper mapper)
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;
         }
 
-        public List<ProductViewModel> GetProductListByCategoryIdForCatalog(int categoryId)
+        public List<ProductViewModel> GetProductListByCategoryId(int categoryId)
         {
             var productRepository = _unitOfWork.GetRepository<ProductEntity>();
             var products = productRepository.Get(q => q.CategoryId == categoryId)

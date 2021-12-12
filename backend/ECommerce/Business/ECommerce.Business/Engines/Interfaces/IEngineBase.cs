@@ -8,5 +8,5 @@ namespace ECommerce.Business.Engines.Interfaces
 {
     public interface IEngineBase
     {
-    }W
+    }
 }

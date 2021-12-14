@@ -1,0 +1,11 @@
+@use "../index";
+
+.layout-container {
+  width: 1280px;
+  margin: 0 auto;
+
+  @media (max-width: index.$tablet) {
+    width: 100%;
+    margin: 0;
+  }
+}

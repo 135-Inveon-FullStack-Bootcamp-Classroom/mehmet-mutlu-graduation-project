@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace ECommerceWebAPI.Data.Services.Abstract
 {
-    public interface ICategoryService
+    public interface IOrderService
     {
-        List<Category> GetAllCategories();
-        Category GetCategoryById(int Id);
+        List<Order> GetAllOrders();
+        Order GetOrderById(int Id);
 
-        void Add(Category category);
-        void Update(Category category, int Id);
+        void Add(Order order);
+        void Update(Order order, int Id);
         void Delete(int Id);
     }
 }

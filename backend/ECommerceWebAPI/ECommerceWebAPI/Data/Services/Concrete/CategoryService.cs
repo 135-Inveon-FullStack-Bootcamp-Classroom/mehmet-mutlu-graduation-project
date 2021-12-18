@@ -1,5 +1,4 @@
 ﻿using ECommerceWebAPI.Data.Services.Abstract;
-using ECommerceWebAPI.Data.ViewModels;
 using ECommerceWebAPI.Entities.Concrete;
 using System;
 using System.Collections.Generic;
@@ -16,7 +15,7 @@ namespace ECommerceWebAPI.Data.Services.Concrete
         {
             _context = context;
         }
-        public void Add(CategoryVM category)
+        public void Add(Category category)
         {
 
             var _category = new Category()
@@ -49,7 +48,7 @@ namespace ECommerceWebAPI.Data.Services.Concrete
             return _context.Categories.FirstOrDefault(category => category.Id == Id);
         }
 
-        public void Update(CategoryVM category, int Id)
+        public void Update(Category category, int Id)
         {
             var _category = _context.Categories.FirstOrDefault(category => category.Id == Id);
             if (_category != null)

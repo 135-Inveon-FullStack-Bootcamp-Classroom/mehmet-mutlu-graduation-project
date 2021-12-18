@@ -1,5 +1,4 @@
-﻿using ECommerceWebAPI.Data.ViewModels;
-using ECommerceWebAPI.Entities.Concrete;
+﻿using ECommerceWebAPI.Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,8 +14,8 @@ namespace ECommerceWebAPI.Data.Services.Abstract
         List<Product> GetPopularProducts();
         List<Product> GetDimishingProducts();
 
-        void Add(ProductVM product);
-        void Update(ProductVM product, int Id);
+        void Add(Product product);
+        void Update(Product product, int Id);
         void Delete(int Id);
     }
 }

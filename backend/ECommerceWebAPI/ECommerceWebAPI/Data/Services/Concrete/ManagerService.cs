@@ -1,5 +1,4 @@
 ﻿using ECommerceWebAPI.Data.Services.Abstract;
-using ECommerceWebAPI.Data.ViewModels;
 using ECommerceWebAPI.Entities.Concrete;
 using System;
 using System.Collections.Generic;
@@ -16,7 +15,7 @@ namespace ECommerceWebAPI.Data.Services.Concrete
         {
             _context = context;
         }
-        public void Add(ManagerVM manager)
+        public void Add(Manager manager)
         {
             var _manager = new Manager()
             {
@@ -57,7 +56,7 @@ namespace ECommerceWebAPI.Data.Services.Concrete
             return _context.Managers.FirstOrDefault(manager => manager.Id == Id);
         }
 
-        public void Update(ManagerVM manager, int Id)
+        public void Update(Manager manager, int Id)
         {
             var _manager = _context.Managers.FirstOrDefault(manager => manager.Id == Id);
             if (_manager != null)

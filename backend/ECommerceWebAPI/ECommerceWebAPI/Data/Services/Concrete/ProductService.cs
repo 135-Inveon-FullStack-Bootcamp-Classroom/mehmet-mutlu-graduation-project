@@ -1,5 +1,4 @@
 ﻿using ECommerceWebAPI.Data.Services.Abstract;
-using ECommerceWebAPI.Data.ViewModels;
 using ECommerceWebAPI.Entities.Concrete;
 using System;
 using System.Collections.Generic;
@@ -17,7 +16,7 @@ namespace ECommerceWebAPI.Data.Services.Concrete
             _context = context;
         }
 
-        public void Add(ProductVM product)
+        public void Add(Product product)
         {
             var _product = new Product()
             {
@@ -57,12 +56,12 @@ namespace ECommerceWebAPI.Data.Services.Concrete
 
         public List<Product> GetDimishingProducts()
         {
-            return _context.Products.Where(product => product.StockAmount <= 10).ToList();
+            return _context.Products.Where(product => (product.StockAmount - product.SoldAmount) <= 10).ToList();
         }
 
         public List<Product> GetPopularProducts()
         {
-            return _context.Products.Where(product => product.SoldAmount >= 20).ToList();
+            return _context.Products.Where(product => product.SoldAmount >= 50).ToList();
         }
 
         public Product GetProductById(int Id)
@@ -70,7 +69,7 @@ namespace ECommerceWebAPI.Data.Services.Concrete
             return _context.Products.FirstOrDefault(product => product.Id == Id);
         }
 
-        public void Update(ProductVM product, int Id)
+        public void Update(Product product, int Id)
         {
             var _product = _context.Products.FirstOrDefault(product => product.Id == Id);
             if (_product != null)

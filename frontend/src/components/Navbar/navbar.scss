@@ -1,0 +1,104 @@
+@use "../../index";
+
+@mixin flexDisplay($justifyContent, $alignItems, $width, $height) {
+  width: $width;
+  height: $height;
+  display: flex;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &-first-section {
+    @include flexDisplay(space-between, center, 100%, 80px);
+    border-bottom: 3px solid index.$light-grey;
+
+    .navbar-logo {
+      @include flexDisplay(center, center, 250px, 100%);
+      font-weight: bold;
+      font-size: 1.6rem;
+      color: index.$dark-blue;
+
+      @media (max-width: index.$tablet) {
+        font-size: 1.2rem;
+        @include flexDisplay(center, center, 200px, 100%);
+      }
+
+      @media (max-width: index.$mobile) {
+        font-size: 1rem;
+        @include flexDisplay(center, center, 160px, 100%);
+      }
+
+      img {
+        width: 50px;
+        margin-right: 20px;
+
+        @media (max-width: index.$tablet) {
+          width: 30px;
+          margin-right: 10px;
+        }
+      }
+    }
+
+    .navbar-cart-container {
+      @include flexDisplay(center, center, 250px, 100%);
+      font-size: 1.4rem;
+
+      @media (max-width: index.$tablet) {
+        @include flexDisplay(center, center, 200px, 100%);
+      }
+
+      @media (max-width: index.$mobile) {
+        font-size: 1rem;
+        @include flexDisplay(center, center, 160px, 100%);
+      }
+
+      button {
+        font-size: inherit;
+        cursor: pointer;
+        background-color: index.$dark-blue;
+        color: index.$white;
+        padding: 10px 25px;
+        border-radius: 10px;
+
+        @media (max-width: index.$mobile) {
+          padding: 10px 15px;
+        }
+
+        i {
+          padding-right: 15px;
+        }
+      }
+    }
+  }
+
+  &-second-section {
+    @include flexDisplay(center, center, 100%, 60px);
+    gap: 20px;
+    border-bottom: 3px solid index.$light-grey;
+
+    @media (max-width: index.$tablet) {
+      gap: 15px;
+    }
+
+    @media (max-width: index.$mobile) {
+      gap: 10px;
+    }
+
+    button {
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: index.$dark-grey;
+
+      @media (max-width: index.$mobile) {
+        font-size: 1rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@use "../../../index";
+
+.card-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: inherit;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(index.$medium-grey, 0.2);
+  backdrop-filter: blur(2px);
+
+  &:hover .card-overlay-link {
+    transform: translateY(0%);
+  }
+
+  &-link {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    background-color: rgba(index.$medium-grey, 0) !important;
+    transform: translateY(50%);
+    transition: all 0.4s ease;
+
+    &-icon {
+      color: index.$dark-grey;
+    }
+  }
+}

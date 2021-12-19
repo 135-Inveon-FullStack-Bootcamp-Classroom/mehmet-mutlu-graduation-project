@@ -18,7 +18,17 @@ $desktop: 1440px;
 
 $white: #FFF;
 $light-grey: #F9F9F8;
-$medium-grey: #898781;
+$medium-grey: #dee2e6;
+$medium-2x-grey: #adb5bd;
 $dark-grey: #222524;
 $light-blue: #337BB6;
 $dark-blue: #013077;
+
+@mixin flexDisplay($justifyContent, $alignItems, $width, $height, $direction: row) {
+  width: $width;
+  height: $height;
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+}

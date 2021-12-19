@@ -1,0 +1,21 @@
+@use "../../index";
+
+.products {
+  width: 100%;
+
+  &-title {
+    width: 100%;
+    margin: 10px 0;
+    padding: 20px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 3px solid index.$light-grey;
+    border-top: 3px solid index.$light-grey;
+
+    h3 {
+      font-size: 1.6rem;
+      color: index.$dark-blue;
+    }
+  }
+}

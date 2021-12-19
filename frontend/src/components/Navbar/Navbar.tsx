@@ -1,15 +1,12 @@
 import React from "react";
-import Logo from "../../assets/images/logo.png";
+import Logo from "../Logo/Logo";
 import "./navbar.scss";
 
 const Navbar: React.FC = () => {
   return (
     <div className="navbar">
       <div className="navbar-first-section">
-        <div className="navbar-logo">
-          <img src={Logo} alt="ECommerce Logo" />
-          TrendTech
-        </div>
+        <Logo />
         <div className="navbar-cart-container">
           <button>
             <i className="fas fa-shopping-bag"></i>

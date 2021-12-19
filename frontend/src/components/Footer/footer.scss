@@ -17,7 +17,7 @@
     @media (max-width: index.$tablet) {
       @include index.flexDisplay(center, center, 100%, 200px);
       border-right: none;
-      border-bottom: 3px solid index.$medium-2x-grey;;
+      border-bottom: 3px solid index.$medium-2x-grey;
     }
   }
 

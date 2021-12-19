@@ -1,6 +1,7 @@
 import React from "react";
 import Logo from "../Logo/Logo";
 import "./navbar.scss";
+import NavbarButton from "./NavbarButton/NavbarButton";
 
 const Navbar: React.FC = () => {
   return (
@@ -15,10 +16,10 @@ const Navbar: React.FC = () => {
         </div>
       </div>
       <div className="navbar-second-section">
-        <button>Telefon</button>
-        <button>Televizyon</button>
-        <button>Bilgisayar</button>
-        <button>Tablet</button>
+        <NavbarButton>Telefon</NavbarButton>
+        <NavbarButton>Televizyon</NavbarButton>
+        <NavbarButton>Bilgisayar</NavbarButton>
+        <NavbarButton>Tablet</NavbarButton>
       </div>
     </div>
   );

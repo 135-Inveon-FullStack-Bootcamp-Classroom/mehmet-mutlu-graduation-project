@@ -37,6 +37,12 @@
         padding: 10px 25px;
         border-radius: 10px;
 
+        &:hover {
+          cursor: pointer;
+          background-color: index.$light-blue;
+          transform: scale(1.03);
+        }
+
         @media (max-width: index.$mobile) {
           padding: 10px 15px;
         }
@@ -60,16 +66,6 @@
 
     @media (max-width: index.$mobile) {
       gap: 10px;
-    }
-
-    button {
-      font-size: 1.2rem;
-      cursor: pointer;
-      color: index.$dark-grey;
-
-      @media (max-width: index.$mobile) {
-        font-size: 1rem;
-      }
     }
   }
 }

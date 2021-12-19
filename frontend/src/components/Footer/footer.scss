@@ -1,0 +1,44 @@
+@use "../../index";
+
+.footer {
+  @include index.flexDisplay(center, center, 100%, 300px);
+  background-color: index.$medium-grey;
+  margin-top: 50px;
+
+  @media (max-width: index.$tablet) {
+    margin-top: 30px;
+    @include index.flexDisplay(center, center, 100%, 200px, column);
+  }
+
+  &-left {
+    @include index.flexDisplay(flex-end, center, 100%, 250px);
+    border-right: 3px solid index.$medium-2x-grey;
+
+    @media (max-width: index.$tablet) {
+      @include index.flexDisplay(center, center, 100%, 200px);
+      border-right: none;
+      border-bottom: 3px solid index.$medium-2x-grey;;
+    }
+  }
+
+  &-right {
+    @include index.flexDisplay(flex-start, center, 100%, 250px);
+
+    @media (max-width: index.$tablet) {
+      @include index.flexDisplay(center, center, 100%, 200px);
+    }
+
+    p {
+      padding-left: 20px;
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: index.$dark-grey;
+
+      a {
+        text-decoration: none;
+        color: index.$dark-blue;
+      }
+    }
+  }
+
+}

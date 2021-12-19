@@ -9,7 +9,12 @@
 
   &-first-section {
     @include index.flexDisplay(space-between, center, 100%, 80px);
+    padding: 0 30px;
     border-bottom: 3px solid index.$light-grey;
+
+    @media (max-width: index.$tablet) {
+      padding: 0;
+    }
 
     .navbar-cart-container {
       @include index.flexDisplay(center, center, 250px, 100%);

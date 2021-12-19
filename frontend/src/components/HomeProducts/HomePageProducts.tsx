@@ -14,7 +14,7 @@ const HomePageProducts: React.FC<IHomePageProducts> = ({ title }) => {
   const isTablet = useMediaQuery({ query: "(max-width: 768px)" });
 
   useEffect(() => {
-    const amount = isMobile ? 2 : isTablet ? 2.5 : 4.5;
+    const amount = isTablet ? 2 : 4.5;
     setShowAmount(amount);
   }, [isTablet, isMobile])
 
@@ -24,10 +24,10 @@ const HomePageProducts: React.FC<IHomePageProducts> = ({ title }) => {
         <h3>{title}</h3>
       </div>
       <Carousel
+        responsive={true}
         show={showAmount}
         slide={isTablet ? 2 : 4}
         swiping={true}
-        responsive={true}
       >
         <Card />
         <Card />

@@ -1,8 +1,13 @@
 import React, { useState } from 'react'
+import { Products } from '../../types/types';
 import "./card.scss"
 import CardOverlay from './CardOverlay/CardOverlay';
 
-const Card : React.FC = () => {
+interface ICard {
+  item: Products;
+}
+
+const Card : React.FC<ICard> = ({ item }) => {
   const [isHovered, setIsHovered] = useState<Boolean>(false);
 
   return (
@@ -11,12 +16,12 @@ const Card : React.FC = () => {
         isHovered && <CardOverlay />
       }
       <div className='card-image'>
-        <img src="https://cdn.vatanbilgisayar.com/Upload/PRODUCT/apple/thumb/113155_large.jpg" alt='Product' />
+        <img src={item.imageURLs} alt='Product' />
       </div>
       <div className='card-info'>
-        <h3>IPhone 11</h3>
-        <p className='desc'>A brand new IPhone 11 64 GB White color!</p>
-        <p className='price'>11.000 ₺</p>
+        <h3>{item.name}</h3>
+        <p className='desc'>{item.description}</p>
+        <p className='price'>{item.price} ₺</p>
       </div>
     </div>
   )

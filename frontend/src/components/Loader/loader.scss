@@ -1,0 +1,33 @@
+@use "../../index";
+
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loader {
+  width: 100%;
+  height: 80vh;
+  background: index.$light-grey;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &-spinner {
+    animation: rotate360 1s linear infinite;
+    transform: translateZ(0);
+    border-top: 2px solid grey;
+    border-right: 2px solid grey;
+    border-bottom: 2px solid grey;
+    border-left: 4px solid black;
+    background: index.$light-grey;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+  }
+}

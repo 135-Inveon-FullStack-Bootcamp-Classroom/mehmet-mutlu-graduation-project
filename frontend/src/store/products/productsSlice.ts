@@ -6,8 +6,10 @@ const initialState = {
   allProducts: [],
   popularProducts: [],
   diminishingProducts: [],
-  error: null,
-  isLoading: false,
+  errorForPopular: null,
+  isLoadingForPopular: false,
+  errorForDiminishing: null,
+  isLoadingForDiminishing: false,
 } as IProductSlice;
 
 export const productsSlice = createSlice({
@@ -16,26 +18,26 @@ export const productsSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder.addCase(getPopularProducts.pending, (state) => {
-      state.isLoading = true;
+      state.isLoadingForPopular = true;
     });
     builder.addCase(getPopularProducts.fulfilled, (state, action) => {
-      state.isLoading = false;
+      state.isLoadingForPopular = false;
       state.popularProducts = action.payload;
     });
     builder.addCase(getPopularProducts.rejected, (state, action) => {
-      state.isLoading = false;
-      state.error = action.error.message;
+      state.isLoadingForPopular = false;
+      state.errorForPopular = action.error.message;
     });
     builder.addCase(getDiminishingProducts.pending, (state) => {
-      state.isLoading = true;
+      state.isLoadingForDiminishing = true;
     });
     builder.addCase(getDiminishingProducts.fulfilled, (state, action) => {
-      state.isLoading = false;
+      state.isLoadingForDiminishing = false;
       state.diminishingProducts = action.payload;
     });
     builder.addCase(getDiminishingProducts.rejected, (state, action) => {
-      state.isLoading = false;
-      state.error = action.error.message;
+      state.isLoadingForDiminishing = false;
+      state.errorForDiminishing = action.error.message;
     });
   },
 });

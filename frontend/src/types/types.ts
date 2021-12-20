@@ -22,6 +22,8 @@ export interface IProductSlice {
   allProducts: Array<Products>;
   popularProducts: Array<Products>;
   diminishingProducts: Array<Products>;
-  error: string | null | undefined;
-  isLoading: boolean;
+  errorForPopular: string | null | undefined;
+  isLoadingForPopular: boolean;
+  errorForDiminishing: string | null | undefined;
+  isLoadingForDiminishing: boolean;
 }

@@ -10,16 +10,19 @@ const Home : React.FC = () => {
   const dispatch = useAppDispatch();
   const popularItems = useAppSelector(popularProducts);
   const diminishingItems = useAppSelector(diminishingProducts);
-  const isLoading = useAppSelector((state) => state.products.isLoading);
-  const error = useAppSelector((state) => state.products.error);
+  const isLoadingForPopular = useAppSelector((state) => state.products.isLoadingForPopular);
+  const errorForPopular = useAppSelector((state) => state.products.errorForPopular);
+  const isLoadingForDiminishing = useAppSelector((state) => state.products.isLoadingForPopular);
+  const errorForDiminishing = useAppSelector((state) => state.products.errorForPopular);
 
   useEffect(() => {
     dispatch(getPopularProducts());
     dispatch(getDiminishingProducts());
-    console.warn(error)
-  }, [dispatch, error]);
+    console.warn(errorForPopular)
+    console.warn(errorForDiminishing)
+  }, [dispatch, errorForPopular, errorForDiminishing]);
 
-  if (isLoading) {
+  if (isLoadingForPopular || isLoadingForDiminishing) {
     return <Loader />
   } 
 

@@ -1,22 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useMediaQuery } from "react-responsive";
 import { Carousel } from "@trendyol-js/react-carousel";
 import "./homePageProducts.scss";
 import Card from "../Card/Card";
+import { Products } from "../../types/types";
 
 interface IHomePageProducts {
-  title: string
+  title: string;
+  items: Array<Products>;
 }
 
-const HomePageProducts: React.FC<IHomePageProducts> = ({ title }) => {
-  const [showAmount, setShowAmount] = useState<number>(4.5);
-  const isMobile = useMediaQuery({ query: "(max-width: 415px)" });
+const HomePageProducts: React.FC<IHomePageProducts> = ({ title, items }) => {
   const isTablet = useMediaQuery({ query: "(max-width: 768px)" });
-
-  useEffect(() => {
-    const amount = isTablet ? 2 : 4.5;
-    setShowAmount(amount);
-  }, [isTablet, isMobile])
 
   return (
     <div className="products">
@@ -24,22 +19,15 @@ const HomePageProducts: React.FC<IHomePageProducts> = ({ title }) => {
         <h3>{title}</h3>
       </div>
       <Carousel
-        responsive={true}
-        show={showAmount}
+        dynamic
+        show={isTablet ? 2 : 4.5}
         slide={isTablet ? 2 : 4}
-        swiping={true}
+        swiping
+        swipeOn={0.1}
       >
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        {items.map(item => (
+          <Card key={item.id} item={item} />
+        ))}
       </Carousel>
     </div>
   );

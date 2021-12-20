@@ -4,11 +4,13 @@ import "./_index.scss";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import { Provider } from 'react-redux';
+import { store } from '../src/store/store';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <Provider store={store}>
+      <App />
+    </Provider>,
   document.getElementById("root")
 );
 

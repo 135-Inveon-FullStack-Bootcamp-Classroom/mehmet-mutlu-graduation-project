@@ -3,7 +3,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearchPlus } from "@fortawesome/free-solid-svg-icons";
 import "./cardOverlay.scss";
 
-const CardOverlay: React.FC = () => {
+interface ICardOverlay {
+  productId: number
+}
+
+const CardOverlay: React.FC<ICardOverlay> = ({ productId }) => {
   return (
       <div className="card-overlay">
         <button className="card-overlay-link">

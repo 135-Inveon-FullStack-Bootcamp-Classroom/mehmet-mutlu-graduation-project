@@ -13,7 +13,7 @@ const Card : React.FC<ICard> = ({ item }) => {
   return (
     <div className='card' onMouseOver={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
       {
-        isHovered && <CardOverlay />
+        isHovered && <CardOverlay productId={item.id} />
       }
       <div className='card-image'>
         <img src={item.imageURLs} alt='Product' />

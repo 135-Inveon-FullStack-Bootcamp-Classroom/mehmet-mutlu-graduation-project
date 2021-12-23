@@ -137,12 +137,12 @@ namespace ECommerceWebAPI.Data
                         CategoryId = 2
                     }, new Product()
                     {
-                        Name = "SAMSUNG QE 65Q60T",
-                        Description = "SAMSUNG QE 65Q60T 65inç 163 cm 4K UHD Smart QLED TV, Dahili Uydu Alıcılı",
-                        Price = 13400,
+                        Name = "SAMSUNG QE 65Q95T",
+                        Description = "SAMSUNG QE 65Q95T 65inç 163 cm 4K UHD Smart QLED TV, Dahili Uydu Alıcılı",
+                        Price = 18000,
                         StockAmount = 40,
                         SoldAmount = 35,
-                        ImageURLs = "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/samsung/thumb/121861_large.jpg",
+                        ImageURLs = "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/samsung/thumb/samsiung-qe-65q95t-gorseli-107842_large.jpg",
                         CategoryId = 2
                     }, new Product()
                     {

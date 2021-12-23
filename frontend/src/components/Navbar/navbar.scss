@@ -2,6 +2,10 @@
 
 .navbar {
   width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  background-color: index.$white;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -56,7 +60,7 @@
 
   &-second-section {
     @include index.flexDisplay(center, center, 100%, 60px);
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     gap: 20px;
     border-bottom: 3px solid index.$light-grey;
 

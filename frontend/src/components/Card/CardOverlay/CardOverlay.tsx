@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearchPlus } from "@fortawesome/free-solid-svg-icons";
 import "./cardOverlay.scss";
 import { Link, useLocation } from "react-router-dom";
+import { useMediaQuery } from "react-responsive";
 
 interface ICardOverlay {
   productId: number;
@@ -10,6 +11,7 @@ interface ICardOverlay {
 
 const CardOverlay: React.FC<ICardOverlay> = ({ productId }) => {
   const location = useLocation();
+  const isMobile = useMediaQuery({ query: "(max-width: 415px)" });
   
   return (
     <div className="card-overlay">
@@ -23,7 +25,7 @@ const CardOverlay: React.FC<ICardOverlay> = ({ productId }) => {
         <FontAwesomeIcon
           className="card-overlay-link-icon"
           icon={faSearchPlus}
-          size="5x"
+          size={isMobile ? "2x" : "5x"}
         />
       </Link>
     </div>

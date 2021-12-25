@@ -20,18 +20,18 @@
     right: 0;
     margin: auto;
     width: 1000px;
-    height: 550px;
+    height: 500px;
     padding: 35px 40px;
     background-color: #f4f4f4;
     border-radius: 1rem;
 
     @media (max-width: index.$tablet) {
       width: 600px;
-      height: 800px;
+      height: 700px;
       padding: 30px 35px;
     }
 
-    @media (max-width: index.$tablet) {
+    @media (max-width: index.$mobile) {
       width: 250px;
       height: 450px;
       padding: 20px 25px;

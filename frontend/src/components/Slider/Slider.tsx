@@ -9,7 +9,7 @@ import FourthCarousel from "../../assets/images/carousel4.webp";
 const Slider: React.FC = () => {
   return (
     <div className="slider">
-      <Carousel autoPlay>
+      <Carousel autoPlay infiniteLoop>
         <div>
           <img src={FirstCarousel} alt="Carousel 1" />
         </div>

@@ -1,12 +1,23 @@
-import React from 'react'
-import "./navbarButton.scss"
+import React from "react";
+import { NavLink } from "react-router-dom";
+import "./navbarButton.scss";
 
-const NavbarButton : React.FC = ({ children }) => {
-  return (
-    <button className='navbar-button'>
-      {children}
-    </button>
-  )
+interface INavbarButton {
+  children: React.ReactChild;
+  to: string;
 }
 
-export default NavbarButton
+const NavbarButton: React.FC<INavbarButton> = ({ children, to }) => {
+  return (
+    <NavLink
+      exact
+      to={to}
+      activeStyle={{ color: "#337BB6" }}
+      className="navbar-button"
+    >
+      {children}
+    </NavLink>
+  );
+};
+
+export default NavbarButton;

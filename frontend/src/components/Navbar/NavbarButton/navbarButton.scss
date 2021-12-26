@@ -1,9 +1,10 @@
 @use "../../../index";
 
 .navbar-button {
+  text-decoration: none;
   font-size: 1.2rem;
   color: index.$dark-grey;
-  transition: all .3s;
+  transition: all 0.3s;
 
   &:hover {
     cursor: pointer;

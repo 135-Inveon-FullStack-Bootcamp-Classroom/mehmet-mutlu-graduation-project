@@ -44,8 +44,8 @@ namespace ECommerceWebAPI.Controllers
             return Ok();
         }
 
-        [HttpGet("get-all-categorys")]
-        public IActionResult GetAllCategorys()
+        [HttpGet("get-all-categories")]
+        public IActionResult GetAllCategories()
         {
             var allcategorys = _categoryService.GetAllCategories();
             return Ok(allcategorys);

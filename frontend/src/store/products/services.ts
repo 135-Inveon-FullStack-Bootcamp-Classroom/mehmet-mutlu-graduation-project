@@ -30,3 +30,13 @@ export const getProductById = createAsyncThunk(
     return response.data;
   }
 );
+
+export const getProductsByCategoryId = createAsyncThunk(
+  "products/getProductsByCategoryId/",
+  async (id: string) => {
+    const response = await axios(
+      `https://localhost:44325/api/Products/get-product-by-category-id/${id}`
+    );
+    return response.data;
+  }
+);

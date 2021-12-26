@@ -1,18 +1,21 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { DefaultProduct, IProductSlice, ProductsStateType } from "../../types/types";
-import { getDiminishingProducts, getPopularProducts, getProductById } from "./services";
+import { getDiminishingProducts, getPopularProducts, getProductById, getProductsByCategoryId } from "./services";
 
 const initialState = {
   allProducts: [],
   popularProducts: [],
   diminishingProducts: [],
   productDetails: DefaultProduct,
+  productsForCategoryId: [],
   errorForPopular: null,
   isLoadingForPopular: false,
   errorForDiminishing: null,
   isLoadingForDiminishing: false,
   errorForProductDetails: null,
-  isLoadingForProductDetails: false
+  isLoadingForProductDetails: false,
+  errorProductsForCategoryId: null,
+  isLoadingProductsForCategoryId: false
 } as IProductSlice;
 
 export const productsSlice = createSlice({
@@ -53,10 +56,22 @@ export const productsSlice = createSlice({
       state.isLoadingForProductDetails = false;
       state.errorForProductDetails = action.error.message;
     });
+    builder.addCase(getProductsByCategoryId.pending, (state) => {
+      state.isLoadingProductsForCategoryId = true;
+    });
+    builder.addCase(getProductsByCategoryId.fulfilled, (state, action) => {
+      state.isLoadingProductsForCategoryId = false;
+      state.productsForCategoryId = action.payload;
+    });
+    builder.addCase(getProductsByCategoryId.rejected, (state, action) => {
+      state.isLoadingProductsForCategoryId = false;
+      state.errorProductsForCategoryId = action.error.message;
+    });
   },
 });
 
 export const popularProducts = (state: ProductsStateType) => state.products.popularProducts;
 export const diminishingProducts = (state: ProductsStateType) => state.products.diminishingProducts;
 export const productDetails = (state: ProductsStateType) => state.products.productDetails;
+export const productsForCategoryId = (state: ProductsStateType) => state.products.productsForCategoryId;
 export default productsSlice.reducer;

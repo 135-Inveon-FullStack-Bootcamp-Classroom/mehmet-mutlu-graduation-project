@@ -47,6 +47,7 @@ export type ProductsStateType = {
     popularProducts: Array<Products>;
     diminishingProducts: Array<Products>;
     productDetails: Products;
+    productsForCategoryId: Array<Products>;
   };
 };
 
@@ -61,12 +62,15 @@ export interface IProductSlice {
   popularProducts: Array<Products>;
   diminishingProducts: Array<Products>;
   productDetails: Products;
+  productsForCategoryId: Array<Products>;
   errorForPopular: string | null | undefined;
   isLoadingForPopular: boolean;
   errorForDiminishing: string | null | undefined;
   isLoadingForDiminishing: boolean;
   errorForProductDetails: string | null | undefined;
   isLoadingForProductDetails: boolean;
+  errorProductsForCategoryId: string | null | undefined;
+  isLoadingProductsForCategoryId: boolean;
 }
 
 export interface ICategorySlice {

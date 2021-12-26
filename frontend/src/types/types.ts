@@ -10,6 +10,20 @@ export type Products = {
   category: null;
 };
 
+export type OrderItem = {
+  id: number;
+  name: string;
+  price: number;
+  description: string;
+  stockAmount: number;
+  soldAmount: number;
+  imageURLs: string;
+  categoryId: number;
+  category: null;
+  count: number;
+  totalPrice: number;
+};
+
 export const DefaultProduct = {
   id: 0,
   name: "",

@@ -1,14 +1,17 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Loader from "../../components/Loader/Loader";
 import Modal from "../../components/Modal/Modal";
+import { CartContext } from "../../context/CartContext";
 import { useAppDispatch, useAppSelector } from "../../hooks/reduxHooks";
 import { productDetails } from "../../store/products/productsSlice";
 import { getProductById } from "../../store/products/services";
+import { Products } from "../../types/types";
 import "./productDetail.scss";
 
 const ProductDetail: React.FC = () => {
   const { productId } = useParams<{ productId: string }>();
+  const { addToCart, checkItem } = useContext(CartContext);
   const dispatch = useAppDispatch();
   const itemDetails = useAppSelector(productDetails);
   const isLoadingForProductDetails = useAppSelector(
@@ -17,6 +20,10 @@ const ProductDetail: React.FC = () => {
   const errorForProductDetails = useAppSelector(
     (state) => state.products.errorForProductDetails
   );
+
+  const addItemToCart = (item: Products) => {
+    addToCart({ ...item, count: 1, totalPrice: item.price });
+  };
 
   useEffect(() => {
     dispatch(getProductById(productId));
@@ -43,7 +50,19 @@ const ProductDetail: React.FC = () => {
           <p>{itemDetails.stockAmount}</p>
           <h4>Fiyatı</h4>
           <p>{itemDetails.price} ₺</p>
-          <button>Sepete Ekle</button>
+          <button
+            disabled={checkItem(itemDetails.id)}
+            style={{
+              backgroundColor: checkItem(itemDetails.id)
+                ? "#F9F9F8"
+                : "#337BB6",
+              color: checkItem(itemDetails.id) ? "#337BB6" : "#F9F9F8",
+              cursor: checkItem(itemDetails.id) ? "default" : "pointer",
+            }}
+            onClick={() => addItemToCart(itemDetails)}
+          >
+            {checkItem(itemDetails.id) ? "Sepete Eklendi" : "Sepete Ekle"}
+          </button>
         </div>
       </div>
     </Modal>

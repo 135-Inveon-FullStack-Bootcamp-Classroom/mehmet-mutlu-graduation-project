@@ -78,14 +78,11 @@
         margin-top: 30px;
         padding: 10px;
         font-size: 18px;
-        color: index.$light-grey;
-        background-color: index.$light-blue;
         border-radius: 10px;
         transition: all 0.5s;
 
         &:hover {
           background-color: index.$dark-blue;
-          cursor: pointer;
         }
       }
 

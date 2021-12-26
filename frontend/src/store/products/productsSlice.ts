@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { DefaultProduct, IProductSlice, StateType } from "../../types/types";
+import { DefaultProduct, IProductSlice, ProductsStateType } from "../../types/types";
 import { getDiminishingProducts, getPopularProducts, getProductById } from "./services";
 
 const initialState = {
@@ -56,7 +56,7 @@ export const productsSlice = createSlice({
   },
 });
 
-export const popularProducts = (state: StateType) => state.products.popularProducts;
-export const diminishingProducts = (state: StateType) => state.products.diminishingProducts;
-export const productDetails = (state: StateType) => state.products.productDetails;
+export const popularProducts = (state: ProductsStateType) => state.products.popularProducts;
+export const diminishingProducts = (state: ProductsStateType) => state.products.diminishingProducts;
+export const productDetails = (state: ProductsStateType) => state.products.productDetails;
 export default productsSlice.reducer;

@@ -10,6 +10,11 @@ export type Products = {
   category: null;
 };
 
+export type Categories = {
+  id: number;
+  name: string;
+};
+
 export type OrderItem = {
   id: number;
   name: string;
@@ -36,12 +41,18 @@ export const DefaultProduct = {
   category: null,
 };
 
-export type StateType = {
+export type ProductsStateType = {
   products: {
     allProducts: Array<Products>;
     popularProducts: Array<Products>;
     diminishingProducts: Array<Products>;
     productDetails: Products;
+  };
+};
+
+export type CategoriesStateType = {
+  categories: {
+    allCategories: Array<Categories>;
   };
 };
 
@@ -56,4 +67,10 @@ export interface IProductSlice {
   isLoadingForDiminishing: boolean;
   errorForProductDetails: string | null | undefined;
   isLoadingForProductDetails: boolean;
+}
+
+export interface ICategorySlice {
+  allCategories: Array<Categories>;
+  errorForCategories: string | null | undefined;
+  isLoadingForCategories: boolean;
 }

@@ -5,6 +5,7 @@
   font-size: 1.2rem;
   color: index.$dark-grey;
   transition: all 0.3s;
+  background-color: transparent !important;
 
   &:hover {
     cursor: pointer;

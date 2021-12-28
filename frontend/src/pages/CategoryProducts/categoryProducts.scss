@@ -1,0 +1,47 @@
+@use "../../index";
+
+.category-products {
+  display: grid; 
+  grid-template-columns: 0.4fr 1.6fr; 
+  grid-template-rows: 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "products-left products-right";
+  
+  &-left {
+    grid-area: products-left;
+    width: 300px;
+    position: fixed;
+    top: 163px;
+    padding: 10px 20px;
+    border: 3px solid index.$light-grey;
+    border-radius: 20px;
+
+    .title {
+      font-size: 24px;
+      font-weight: 600;
+      padding: 10px;
+    }
+
+    .sorting {
+      select {
+        width: 100%;
+        font-size: 16px;
+        padding: 10px;
+
+        option {
+          background-color: index.$light-grey;
+        }
+      }
+    }
+  }
+
+  &-right {
+    grid-area: products-right;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+}

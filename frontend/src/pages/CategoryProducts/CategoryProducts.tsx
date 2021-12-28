@@ -6,7 +6,7 @@ import { CartContext } from "../../context/CartContext";
 import { useAppDispatch, useAppSelector } from "../../hooks/reduxHooks";
 import { productsForCategoryId } from "../../store/products/productsSlice";
 import { getProductsByCategoryId } from "../../store/products/services";
-import "./categpryProducts.scss";
+import "./categoryProducts.scss";
 
 const CategoryProducts = () => {
   const { id } = useParams<{ id: string }>();
@@ -30,9 +30,20 @@ const CategoryProducts = () => {
   }
 
   return (
-    <div className="products">
-      <div className="products-left"></div>
-      <div className="products-right">
+    <div className="category-products">
+      <div className="category-products-left">
+        <h3 className="title">Ürünleri Filtrele</h3>
+        <div className="sorting">
+          <select name="" id="">
+            <option disabled selected>Sıralama tipi seçiniz</option>
+            <option value="1">İsme göre artan</option>
+            <option value="2">İsme göre azalan</option>
+            <option value="3">Fiyata göre artan</option>
+            <option value="4">Fiyata göre azalan</option>
+          </select>
+        </div>
+      </div>
+      <div className="category-products-right">
         {items.map((item) => (
           <Card key={item.id} item={item} />
         ))}

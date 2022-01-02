@@ -1,0 +1,69 @@
+@use "../../index";
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  padding: 10px;
+  color: index.$dark-blue;
+}
+
+.sub-title {
+  border-top: 2px solid index.$light-grey;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 5px 10px;
+  margin: 8px 0;
+  color: index.$dark-grey;
+}
+
+.sorting {
+  select {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+
+    option {
+      background-color: index.$light-grey;
+    }
+  }
+}
+
+.price-range {
+  input {
+    width: 40.5%;
+    display: inline-block;
+    border: 1px solid index.$dark-grey;
+    border-radius: 10px;
+    margin: 0 10px;
+    font-size: 18px;
+    padding: 5px 10px;
+  }
+}
+
+.search-name {
+  input {
+    width: 90%;
+    font-size: 18px;
+    padding: 5px 10px;
+    border: 1px solid index.$dark-grey;
+    border-radius: 10px;
+    margin: 0 10px 10px;
+  }
+}
+
+.submit-button {
+  width: 90%;
+  margin: 10px;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 10px;
+  background-color: index.$light-blue;
+  color: index.$light-grey;
+  cursor: pointer;
+  transition: all 0.5s;
+
+  &:hover {
+    background-color: index.$dark-blue;
+  }
+}

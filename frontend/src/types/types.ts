@@ -57,6 +57,12 @@ export type CategoriesStateType = {
   };
 };
 
+export type FilteredProductsStateType = {
+  filteredProducts: {
+    products: Array<Products>;
+  };
+};
+
 export interface IProductSlice {
   allProducts: Array<Products>;
   popularProducts: Array<Products>;
@@ -77,4 +83,19 @@ export interface ICategorySlice {
   allCategories: Array<Categories>;
   errorForCategories: string | null | undefined;
   isLoadingForCategories: boolean;
+}
+
+export enum SortingEnum {
+  ascName = "ascName",
+  descName = "descName",
+  ascPrice = "ascPrice",
+  descPrice = "descPrice",
+  default = "default"
+}
+
+export interface IFormInput {
+  sorting?: SortingEnum;
+  productName?: string;
+  lowestPrice?: number;
+  highestPrice?: number;
 }

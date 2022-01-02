@@ -7,6 +7,21 @@
   gap: 0px 0px;
   grid-template-areas: "products-left products-right";
 
+  @media (max-width: index.$tablet) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.3fr 1.7fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "products-left"
+      "products-right";
+  }
+
+  @media (max-width: index.$mobile) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "products-right";
+  }
+
   &-left {
     grid-area: products-left;
     width: 100%;
@@ -18,6 +33,16 @@
     background-color: index.$white;
     border: 3px solid index.$light-grey;
     border-radius: 20px;
+
+    @media (max-width: index.$tablet) {
+      position: relative;
+      top: 0px;
+      height: 200px;
+    }
+
+    @media (max-width: index.$mobile) {
+      display: none;
+    }
   }
 
   &-right {
@@ -27,5 +52,9 @@
     align-items: center;
     justify-content: center;
     gap: 20px;
+
+    @media (max-width: index.$tablet) {
+      gap: 10px;
+    }
   }
 }

@@ -90,7 +90,7 @@ const Filter: React.FC<IFilter> = ({ products }) => {
   }, [dispatch, products, filteredItems]);
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form className="filter-form" onSubmit={handleSubmit(onSubmit)}>
       <h3 className="title">Ürünleri Filtrele</h3>
       <div className="sorting">
         <p className="sub-title">Sıralama Tipi</p>

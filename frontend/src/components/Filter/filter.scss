@@ -1,96 +1,171 @@
 @use "../../index";
 
-.title {
-  font-size: 26px;
-  font-weight: 600;
-  padding: 10px;
-  color: index.$dark-blue;
-}
+.filter-form {
+  @media (max-width: index.$tablet) {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1.4fr 0.6fr;
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "title title title"
+      "sorting price-range search-name"
+      ". submit-button reset-button";
+  }
 
-.error {
-  color: red;
-  font-size: 10px;
-  margin: 0 10px;
-}
-
-.sub-title {
-  border-top: 2px solid index.$light-grey;
-  font-size: 20px;
-  font-weight: 500;
-  padding: 5px 10px;
-  margin: 8px 0;
-  color: index.$dark-grey;
-}
-
-.sorting {
-  select {
-    width: 100%;
-    font-size: 16px;
+  .title {
+    grid-area: title;
+    font-size: 26px;
+    font-weight: 600;
     padding: 10px;
+    color: index.$dark-blue;
 
-    option {
-      background-color: index.$light-grey;
+    @media (max-width: index.$tablet) {
+      font-size: 20px;
+      padding: 5px;
     }
   }
-}
 
-.price-range {
-  input {
-    width: 40.5%;
-    display: inline-block;
-    border: 1px solid index.$dark-grey;
-    border-radius: 10px;
+  .error {
+    color: red;
+    font-size: 10px;
     margin: 0 10px;
-    font-size: 18px;
-    padding: 5px 10px;
-  }
-}
 
-.search-name {
-  input {
-    width: 90%;
-    font-size: 18px;
+    @media (max-width: index.$tablet) {
+      font-size: 8px;
+      margin: 0 5px;
+    }
+  }
+
+  .sub-title {
+    border-top: 2px solid index.$light-grey;
+    font-size: 20px;
+    font-weight: 500;
     padding: 5px 10px;
-    border: 1px solid index.$dark-grey;
+    margin: 8px 0;
+    color: index.$dark-grey;
+
+    @media (max-width: index.$tablet) {
+      font-size: 16px;
+      padding: 5px;
+      margin: 0;
+    }
+  }
+
+  .sorting {
+    grid-area: sorting;
+
+    @media (max-width: index.$tablet) {
+      border-bottom: 2px solid index.$light-grey;
+    }
+
+    select {
+      width: 100%;
+      font-size: 16px;
+      padding: 10px;
+
+      @media (max-width: index.$tablet) {
+        font-size: 12px;
+        padding: 5px;
+      }
+
+      option {
+        background-color: index.$light-grey;
+      }
+    }
+  }
+
+  .price-range {
+    grid-area: price-range;
+
+    @media (max-width: index.$tablet) {
+      border-bottom: 2px solid index.$light-grey;
+    }
+
+    input {
+      width: 40.5%;
+      display: inline-block;
+      border: 1px solid index.$dark-grey;
+      border-radius: 10px;
+      margin: 0 10px;
+      font-size: 18px;
+      padding: 5px 10px;
+
+      @media (max-width: index.$tablet) {
+        font-size: 14px;
+        padding: 5px;
+      }
+    }
+  }
+
+  .search-name {
+    grid-area: search-name;
+
+    @media (max-width: index.$tablet) {
+      border-bottom: 2px solid index.$light-grey;
+    }
+
+    input {
+      width: 90%;
+      font-size: 18px;
+      padding: 5px 10px;
+      border: 1px solid index.$dark-grey;
+      border-radius: 10px;
+      margin: 0 10px 10px;
+
+      @media (max-width: index.$tablet) {
+        font-size: 14px;
+        padding: 5px;
+      }
+    }
+  }
+
+  .submit-button {
+    grid-area: submit-button;
+    width: 91%;
+    margin: 5px 10px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 500;
     border-radius: 10px;
-    margin: 0 10px 10px;
-  }
-}
-
-.submit-button {
-  width: 90%;
-  margin: 10px;
-  padding: 10px;
-  font-size: 20px;
-  font-weight: 500;
-  border-radius: 10px;
-  background-color: index.$dark-blue;
-  border: 2px solid index.$dark-blue;
-  color: index.$light-grey;
-  cursor: pointer;
-  transition: all 0.5s;
-
-  &:hover {
-    background-color: index.$light-blue;
-    border-color: index.$light-blue;
-  }
-}
-
-.reset-button {
-  width: 90%;
-  margin: 5px 10px;
-  padding: 10px;
-  font-size: 20px;
-  font-weight: 500;
-  border-radius: 10px;
-  background-color: inherit;
-  color: index.$dark-blue;
-  border: 2px solid index.$dark-blue;
-  cursor: pointer;
-  transition: all 0.5s;
-
-  &:hover {
     background-color: index.$dark-blue;
+    border: 2px solid index.$dark-blue;
     color: index.$light-grey;
+    cursor: pointer;
+    transition: all 0.5s;
+
+    @media (max-width: index.$tablet) {
+      font-size: 16px;
+      padding: 10px 5px;
+    }
+
+    &:hover {
+      background-color: index.$light-blue;
+      border-color: index.$light-blue;
+    }
+  }
+
+  .reset-button {
+    grid-area: reset-button;
+    width: 90%;
+    margin: 5px 10px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 10px;
+    background-color: inherit;
+    color: index.$dark-blue;
+    border: 2px solid index.$dark-blue;
+    cursor: pointer;
+    transition: all 0.5s;
+
+    @media (max-width: index.$tablet) {
+      font-size: 16px;
+      padding: 5px;
+    }
+
+    &:hover {
+      background-color: index.$dark-blue;
+      color: index.$light-grey;
+    }
   }
 }

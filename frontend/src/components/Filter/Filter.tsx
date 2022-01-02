@@ -25,14 +25,11 @@ const Filter: React.FC<IFilter> = ({ products }) => {
   const [filteredItems, setFilteredItems] = useState<Array<Products> | null>(
     null
   );
-  console.log(filteredItems);
   let arrayForSort: Array<Products> = filteredItems
     ? [...filteredItems]
     : [...products];
 
   const onSubmit: SubmitHandler<IFormInput> = (data) => {
-    console.log(data);
-
     if (data.sorting !== SortingEnum.default) {
       if (data.sorting === SortingEnum.ascName) {
         arrayForSort.sort((a, b) => (a.name > b.name ? -1 : 1));
@@ -112,8 +109,12 @@ const Filter: React.FC<IFilter> = ({ products }) => {
         <input type="number" {...register("lowestPrice")} />
         -
         <input type="number" {...register("highestPrice")} />
-        {errors.lowestPrice && <span className="error">{errors.lowestPrice.message}</span>}
-        {errors.highestPrice && <span className="error">{errors.highestPrice.message}</span>}
+        {errors.lowestPrice && (
+          <span className="error">{errors.lowestPrice.message}</span>
+        )}
+        {errors.highestPrice && (
+          <span className="error">{errors.highestPrice.message}</span>
+        )}
       </div>
       <div className="search-name">
         <p className="sub-title">Ürün Adı</p>

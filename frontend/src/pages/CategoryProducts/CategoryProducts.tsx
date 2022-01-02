@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Card from "../../components/Card/Card";
 import Filter from "../../components/Filter/Filter";
@@ -8,7 +8,7 @@ import { productsForCategoryId } from "../../store/products/productsSlice";
 import { getProductsByCategoryId } from "../../store/products/services";
 import "./categoryProducts.scss";
 
-const CategoryProducts = () => {
+const CategoryProducts: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const dispatch = useAppDispatch();
   const items = useAppSelector(productsForCategoryId);

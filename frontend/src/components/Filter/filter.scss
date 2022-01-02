@@ -1,10 +1,16 @@
 @use "../../index";
 
 .title {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 600;
   padding: 10px;
   color: index.$dark-blue;
+}
+
+.error {
+  color: red;
+  font-size: 10px;
+  margin: 0 10px;
 }
 
 .sub-title {
@@ -58,12 +64,33 @@
   font-size: 20px;
   font-weight: 500;
   border-radius: 10px;
-  background-color: index.$light-blue;
+  background-color: index.$dark-blue;
+  border: 2px solid index.$dark-blue;
   color: index.$light-grey;
   cursor: pointer;
   transition: all 0.5s;
 
   &:hover {
+    background-color: index.$light-blue;
+    border-color: index.$light-blue;
+  }
+}
+
+.reset-button {
+  width: 90%;
+  margin: 5px 10px;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 10px;
+  background-color: inherit;
+  color: index.$dark-blue;
+  border: 2px solid index.$dark-blue;
+  cursor: pointer;
+  transition: all 0.5s;
+
+  &:hover {
     background-color: index.$dark-blue;
+    color: index.$light-grey;
   }
 }

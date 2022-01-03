@@ -29,7 +29,8 @@
         @include index.flexDisplay(center, center, 160px, 100%);
       }
 
-      button {
+      &-button {
+        text-decoration: none;
         position: relative;
         font-size: inherit;
         cursor: pointer;

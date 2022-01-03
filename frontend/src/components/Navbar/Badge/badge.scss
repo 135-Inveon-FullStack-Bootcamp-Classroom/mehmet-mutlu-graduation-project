@@ -3,13 +3,13 @@
 .badge {
   display: inline-block;
   position: absolute;
-  top: -10px;
+  top: -8px;
   left: 3px;
   background-color: index.$dark-blue;
-  border: 3px solid index.$white;
+  border: 2px solid index.$white;
   border-radius: 50%;
-  font-size: 14px;
-  padding: 1.5px 4px;
+  font-size: 12px;
+  padding: 1px 5px;
 
   span {
     border-radius: 50%;

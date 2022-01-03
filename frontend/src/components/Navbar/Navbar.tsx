@@ -1,4 +1,5 @@
 import React, { useContext, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
 import { useAppDispatch, useAppSelector } from "../../hooks/reduxHooks";
 import { allCategories } from "../../store/categories/categoriesSlice";
@@ -34,11 +35,11 @@ const Navbar: React.FC = () => {
       <div className="navbar-first-section">
         <Logo />
         <div className="navbar-cart-container">
-          <button>
+          <Link className="navbar-cart-container-button" to="/cart">
             <Badge>{cartItems.length}</Badge>
             <i className="fas fa-shopping-bag"></i>
             <span>Sepetim</span>
-          </button>
+          </Link>
         </div>
       </div>
       <div className="navbar-second-section">

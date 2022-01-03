@@ -1,0 +1,13 @@
+@use "../../index";
+
+.empty-cart {
+  @include index.flexDisplay(center, center, 100%, 100%, column);
+  padding: 50px 0;
+
+  p {
+    margin: 90px 0 20px;
+    font-size: 20px;
+    font-weight: 500;
+    color: index.$dark-grey;
+  }
+}

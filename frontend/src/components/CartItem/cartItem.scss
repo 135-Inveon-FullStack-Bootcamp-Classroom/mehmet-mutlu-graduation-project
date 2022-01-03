@@ -16,12 +16,33 @@
   border-radius: 20px;
   margin-bottom: 5px;
 
+  @media (max-width: index.$tablet) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.3fr 1.1fr 0.6fr;
+    grid-template-areas:
+      "cart-items-image"
+      "cart-items-quantity"
+      "cart-items-price";
+  }
+
   &-image {
     @include display(flex-start, center);
+
+    @media (max-width: index.$tablet) {
+      @include display(center, center);
+    }
 
     &-link {
       @include display(flex-start, center);
       text-decoration: none;
+
+      @media (max-width: index.$tablet) {
+        @include display(center, center);
+      }
+
+      @media (max-width: index.$mobile) {
+        flex-direction: column;
+      }
 
       img {
         width: 100px;

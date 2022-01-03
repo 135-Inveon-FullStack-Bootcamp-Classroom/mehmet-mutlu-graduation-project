@@ -2,7 +2,7 @@
 
 .footer {
   @include index.flexDisplay(center, center, 100%, 200px);
-  background-color: index.$medium-grey;
+  background-color: index.$bar-colors;
   margin-top: 50px;
 
   @media (max-width: index.$tablet) {

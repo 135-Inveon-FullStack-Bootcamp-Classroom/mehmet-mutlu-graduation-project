@@ -61,14 +61,14 @@
     margin-bottom: 10px;
     gap: 20px;
     border-bottom: 3px solid index.$light-grey;
-    background-color: index.$light-grey;
+    background-color: index.$bar-colors;
 
     @media (max-width: index.$tablet) {
       gap: 15px;
     }
 
     @media (max-width: index.$mobile) {
-      gap: 10px;
+      gap: 5px;
     }
   }
 }

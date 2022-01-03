@@ -1,0 +1,72 @@
+@use "../../index";
+
+@mixin display($justifyContent, $alignItems) {
+  display: flex;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+}
+
+.cart-items {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 0.7fr;
+  grid-template-rows: 150px;
+  gap: 0px 0px;
+  grid-template-areas: "cart-items-image cart-items-quantity cart-items-price";
+  border: 2px solid index.$light-grey;
+  border-radius: 20px;
+  margin-bottom: 5px;
+
+  &-image {
+    @include display(flex-start, center);
+
+    &-link {
+      @include display(flex-start, center);
+      text-decoration: none;
+
+      img {
+        width: 100px;
+        margin: 0px 20px;
+        border-radius: 10px;
+      }
+  
+      p {
+        font-size: 18px;
+        font-weight: 500;
+        color: index.$dark-blue;
+      }
+    }
+  }
+
+  &-quantity {
+    @include display(center, center);
+
+    button {
+      padding: 10px;
+      background-color: index.$light-grey;
+      border-radius: 10px;
+      margin: 0 10px;
+      transition: 0.5s all;
+
+      &:hover {
+        cursor: pointer;
+        background-color: index.$medium-grey;
+      }
+    }
+
+    p {
+      font-size: 24px;
+      font-weight: 600;
+      padding: 0 10px;
+    }
+  }
+
+  &-price {
+    @include display(center, center);
+
+    p {
+      font-size: 20px;
+      font-weight: 500;
+      color: index.$dark-blue;
+    }
+  }
+}

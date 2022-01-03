@@ -4,6 +4,7 @@ import { Location } from "history";
 import Home from "../pages/Home/Home";
 import ProductDetail from "../pages/ProductDetail/ProductDetail";
 import CategoryProducts from "../pages/CategoryProducts/CategoryProducts";
+import Cart from "../pages/Cart/Cart";
 
 const Routes: React.FC = () => {
   const location = useLocation<{ background?: Location<{} | null> }>();
@@ -16,6 +17,9 @@ const Routes: React.FC = () => {
         </Route>
         <Route path="/categories/:id" exact>
           <CategoryProducts />
+        </Route>
+        <Route path="/cart" exact>
+          <Cart />
         </Route>
       </Switch>
       {background && (

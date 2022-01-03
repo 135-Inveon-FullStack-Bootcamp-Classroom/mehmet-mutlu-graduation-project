@@ -1,0 +1,38 @@
+@use "../../index";
+
+.cart-total {
+  @include index.flexDisplay(flex-start, flex-start, 80%, 170px, column);
+  margin: 0 20px;
+  background-color: index.$light-grey;
+  border: 2px solid index.$light-grey;
+  border-radius: 20px;
+   
+  &-title {
+    font-size: 22px;
+    color: index.$dark-blue;
+    padding: 15px 10px 10px;
+  }
+
+  &-price {
+    font-size: 18px;
+    font-weight: 600;
+    color: index.$light-blue;
+    padding: 10px;
+  }
+
+  button {
+    width: 80%;
+    font-size: 16px;
+    padding: 10px;
+    margin: 10px;
+    background-color: index.$dark-blue;
+    color: index.$white;
+    border-radius: 10px;
+    transition: .5s all;
+
+    &:hover {
+      cursor: pointer;
+      background-color: index.$light-blue;
+    }
+  }
+}

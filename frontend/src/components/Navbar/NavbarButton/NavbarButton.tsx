@@ -12,7 +12,7 @@ const NavbarButton: React.FC<INavbarButton> = ({ children, to }) => {
     <NavLink
       exact
       to={to}
-      activeStyle={{ color: "#337BB6" }}
+      activeStyle={{ color: "#013077", borderBottom: "2px solid #013077" }}
       className="navbar-button"
     >
       {children}

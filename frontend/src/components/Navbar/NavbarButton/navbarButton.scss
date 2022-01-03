@@ -3,17 +3,20 @@
 .navbar-button {
   text-decoration: none;
   font-size: 1.2rem;
+  font-weight: 500;
   color: index.$dark-grey;
   transition: all 0.3s;
   background-color: transparent !important;
+  padding: 15px 5px;
 
   &:hover {
+    border-bottom: 2px solid index.$dark-blue;
     cursor: pointer;
-    color: index.$light-blue;
-    transform: scale(1.03);
+    color: index.$dark-blue;
   }
 
   @media (max-width: index.$mobile) {
     font-size: .8rem;
+    padding: 17px 2px;
   }
 }

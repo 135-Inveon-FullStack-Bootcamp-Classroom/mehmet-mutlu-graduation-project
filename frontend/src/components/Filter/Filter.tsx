@@ -104,6 +104,10 @@ const Filter: React.FC<IFilter> = ({ products }) => {
           <option value="descPrice">Fiyata göre azalan</option>
         </select>
       </div>
+      <div className="search-name">
+        <p className="sub-title">Ürün Adı</p>
+        <input type="search" {...register("productName")} />
+      </div>
       <div className="price-range">
         <p className="sub-title">Fiyat Aralığı</p>
         <input type="number" {...register("lowestPrice")} />
@@ -115,10 +119,6 @@ const Filter: React.FC<IFilter> = ({ products }) => {
         {errors.highestPrice && (
           <span className="error">{errors.highestPrice.message}</span>
         )}
-      </div>
-      <div className="search-name">
-        <p className="sub-title">Ürün Adı</p>
-        <input type="search" {...register("productName")} />
       </div>
       <button type="submit" className="submit-button">
         Arama Yap

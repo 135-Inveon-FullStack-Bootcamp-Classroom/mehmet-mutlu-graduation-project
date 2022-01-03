@@ -14,7 +14,7 @@
 
   .title {
     grid-area: title;
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 600;
     padding: 10px;
     color: index.$dark-blue;
@@ -38,7 +38,7 @@
 
   .sub-title {
     border-top: 2px solid index.$light-grey;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
     padding: 5px 10px;
     margin: 8px 0;
@@ -60,7 +60,7 @@
 
     select {
       width: 100%;
-      font-size: 16px;
+      font-size: 14px;
       padding: 10px;
 
       @media (max-width: index.$tablet) {
@@ -84,11 +84,16 @@
     input {
       width: 40.5%;
       display: inline-block;
-      border: 1px solid index.$dark-grey;
+      border: 1px solid #d3d3d3;
       border-radius: 10px;
-      margin: 0 10px;
-      font-size: 18px;
+      margin: 0 10px 10px;
+      font-size: 14px;
       padding: 5px 10px;
+      transition: .2s all;
+
+      &:focus {
+        border: 1px solid index.$dark-grey;
+      }
 
       @media (max-width: index.$tablet) {
         width: 35%;
@@ -107,11 +112,16 @@
 
     input {
       width: 90%;
-      font-size: 18px;
+      font-size: 14px;
       padding: 5px 10px;
-      border: 1px solid index.$dark-grey;
+      border: 1px solid #d3d3d3;
       border-radius: 10px;
-      margin: 0 10px 10px;
+      margin: 0 10px;
+      transition: .2s all;
+
+      &:focus {
+        border: 1px solid index.$dark-grey;
+      }
 
       @media (max-width: index.$tablet) {
         width: 80%;
@@ -126,7 +136,7 @@
     width: 91%;
     margin: 5px 10px;
     padding: 10px;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 500;
     border-radius: 10px;
     background-color: index.$dark-blue;
@@ -152,7 +162,7 @@
     width: 90%;
     margin: 5px 10px;
     padding: 10px;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 500;
     border-radius: 10px;
     background-color: inherit;

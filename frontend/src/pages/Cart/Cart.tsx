@@ -8,7 +8,6 @@ import "./cart.scss";
 
 const Cart: React.FC = () => {
   const { cartItems } = useContext(CartContext);
-  console.log(cartItems);
 
   return (
     <>

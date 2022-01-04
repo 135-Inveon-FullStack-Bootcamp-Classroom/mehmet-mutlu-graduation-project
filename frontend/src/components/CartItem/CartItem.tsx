@@ -1,7 +1,8 @@
 import { faMinus, faPlus, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import React, { useContext } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { CartContext } from "../../context/CartContext";
 import { OrderItem } from "../../types/types";
 import "./cartItem.scss";
 
@@ -11,6 +12,8 @@ interface ICartItem {
 
 const CartItem: React.FC<ICartItem> = ({ item }) => {
   const location = useLocation();
+  const { deleteItemFromCart, increaseCountOfItem, descreaseCountOfItem } =
+    useContext(CartContext);
 
   return (
     <div className="cart-items">
@@ -27,7 +30,13 @@ const CartItem: React.FC<ICartItem> = ({ item }) => {
         </Link>
       </div>
       <div className="cart-items-quantity">
-        <button>
+        <button
+          onClick={
+            item.count === 1
+              ? () => deleteItemFromCart(item.id)
+              : () => descreaseCountOfItem(item.id)
+          }
+        >
           {item.count === 1 ? (
             <FontAwesomeIcon
               style={{ color: "#e63946" }}
@@ -44,7 +53,7 @@ const CartItem: React.FC<ICartItem> = ({ item }) => {
           )}
         </button>
         <p>{item.count}</p>
-        <button>
+        <button onClick={() => increaseCountOfItem(item.id)}>
           <FontAwesomeIcon
             className="card-overlay-link-icon"
             icon={faPlus}

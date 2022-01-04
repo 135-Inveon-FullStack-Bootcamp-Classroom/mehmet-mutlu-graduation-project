@@ -3,6 +3,7 @@
 .empty-cart {
   @include index.flexDisplay(center, center, 100%, 100%, column);
   padding: 50px 0;
+  text-align: center;
 
   p {
     margin: 90px 0 20px;

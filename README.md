@@ -1,10 +1,10 @@
 # ECommerce App with ReactJS and .Net Core
 
 <ul style="list-style-type:disc">
-   <li>I have coded a FullStack ECommerce App with ReactJS and .Net Core.</li>
-   <li>In this project, I have tried to implement my learning outcomes from Inveon FullStack Bootcamp.</li>
-   <li>For backend, I have created a .Net Core Web API project and I have used MSSql.</li>
-   <li>I have created frontend with ReactJS and TypeScript.</li>
+   <li>Coded a FullStack ECommerce App with ReactJS and .Net Core</li>
+   <li>Tried to implement my learning outcomes from bootcamps</li>
+   <li>Created backend as a .Net Core Web API project and used MSSql.</li>
+   <li>Created frontend with ReactJS, TypeScript and SCSS.</li>
 </ul>
 
 # 📌 Installation For Backend

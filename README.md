@@ -20,10 +20,10 @@
    ```
 
 ### Install the dependencies
-    ```bash
+   ```bash
    dotnet tool install --global dotnet-ef
    dotnet restore
-    ```
+   ```
 
 ### Start
    ```bash

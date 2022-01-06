@@ -14,7 +14,7 @@
    git clone https://github.com/135-Inveon-FullStack-Bootcamp-Classroom/mehmet-mutlu-graduation-project.git
    ```
 
-### Go To Folder
+### Go to folder
    ```bash
    cd backend
    ```
@@ -37,7 +37,7 @@
    git clone https://github.com/135-Inveon-FullStack-Bootcamp-Classroom/mehmet-mutlu-graduation-project.git
    ```
 
-### Go To Folder
+### Go to folder
    ```bash
    cd frontend
    ```

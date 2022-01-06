@@ -1,6 +1,11 @@
 # ECommerce App with ReactJS and .Net Core
 
-My project is still on progress...
+<ul style="list-style-type:disc">
+   <li>I have coded a FullStack ECommerce App with ReactJS and .Net Core.</li>
+   <li>In this project, I have tried to implement my learning outcomes from Inveon FullStack Bootcamp.</li>
+   <li>For backend, I have created a .Net Core Web API project and I have used MSSql.</li>
+   <li>I have created frontend with ReactJS and TypeScript.</li>
+</ul>
 
 # 📌 Installation For Backend
 
@@ -14,15 +19,15 @@ My project is still on progress...
    cd backend
    ```
 
-### Check EF
+### Install the dependencies
     ```bash
-    dotnet tool install --global dotnet-ef
+   dotnet tool install --global dotnet-ef
+   dotnet restore
     ```
 
 ### Start
    ```bash
-   dotnet restore
-   dotnet tool restore
+   dotnet run
    ```
 
 # 📌 Installation For Frontend
@@ -47,15 +52,3 @@ My project is still on progress...
    npm start
    ```
 
-# 🧰 Toolbox
-
-<ul style="list-style-type:disc">
-   <li><a href="https://reactjs.org">ReactJS</a></li>
-   <li><a href="https://docs.microsoft.com/en-us/aspnet/core/introduction-to-aspnet-core?view=aspnetcore-6.0">.NET Core</a></li>
-   <li><a href="https://docs.microsoft.com/en-us/ef/core/">Entity Framework Core</a></li>
-   <li><a href="https://www.typescriptlang.org/">TypeScript</a></li>
-   <li><a href="https://docs.microsoft.com/en-us/sql/?view=sql-server-ver15">MSSql</a></li>
-   <li><a href="https://react-redux.js.org/">React Redux</a></li>
-   <li><a href="https://redux-toolkit.js.org/">Redux Toolkit</a></li>
-   <li><a href="https://sass-lang.com/">SCSS</a></li>
-</ul>
